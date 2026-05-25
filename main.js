@@ -1,76 +1,50 @@
-/* =============================================
-   main.js — Interactions & Animations
-   ============================================= */
-
-// ── Sticky nav on scroll ──────────────────────
+// NAV SCROLL
 const nav = document.getElementById('nav');
-
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 40) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
+  nav.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
-// ── Mobile nav toggle ────────────────────────
+// MOBILE TOGGLE
 const navToggle = document.getElementById('navToggle');
-const navLinks  = document.getElementById('navLinks');
-
+const navLinks = document.getElementById('navLinks');
 navToggle.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', isOpen);
+  navLinks.classList.toggle('open');
 });
-
-// Close mobile nav when a link is clicked
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', false);
-  });
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-// ── Intersection Observer for fade-in ────────
-const fadeEls = document.querySelectorAll(
-  '.service-card, .client-card, .stat, .positioning__text, ' +
-  '.about__text, .about__why, .contact__text, .contact__form, ' +
-  '.hero__card, .cta-banner__inner'
-);
-
-fadeEls.forEach(el => el.classList.add('fade-in'));
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      // Stagger siblings slightly
-      const siblings = [...entry.target.parentElement.children];
-      const index = siblings.indexOf(entry.target);
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, index * 80);
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-fadeEls.forEach(el => observer.observe(el));
-
-// ── Active nav link on scroll ─────────────────
+// SMOOTH ACTIVE LINK
 const sections = document.querySelectorAll('section[id]');
-const navLinkEls = document.querySelectorAll('.nav__link:not(.nav__link--cta)');
+const links = document.querySelectorAll('.nav__link');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      links.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector('.nav__link[href="#' + entry.target.id + '"]');
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => observer.observe(s));
 
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute('id');
+// FADE-IN ANIMATION
+const fadeObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      fadeObs.unobserve(entry.target);
     }
   });
-  navLinkEls.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+
+// ACCORDION
+document.querySelectorAll('.accordion__trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const item = trigger.closest('.accordion__item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.accordion__item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
   });
-}, { passive: true });
+});
