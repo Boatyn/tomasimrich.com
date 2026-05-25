@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -105,23 +105,6 @@
     <div class="stats-strip__item fade-in">
       <span class="stats-strip__number">98%</span>
       <span class="stats-strip__label">Client retention rate</span>
-    </div>
-  </div>
-</section>
-
-<!-- LOGOS STRIP -->
-<section class="logos-strip">
-  <div class="container">
-    <p class="logos-strip__label">Companies I've worked with</p>
-    <div class="logos-strip__track">
-      <div class="logo-item"><img src="logos/logo-1.svg" alt="Company 1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="logo-fallback">Accenture</span></div>
-      <div class="logo-item"><img src="logos/logo-2.svg" alt="Company 2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="logo-fallback">Deloitte</span></div>
-      <div class="logo-item"><img src="logos/logo-3.svg" alt="Company 3" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="logo-fallback">KPMG</span></div>
-      <div class="logo-item"><img src="logos/logo-4.svg" alt="Company 4" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="logo-fallback">Salesforce</span></div>
-      <div class="logo-item"><img src="logos/logo-5.svg" alt="Company 5" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="logo-fallback">HubSpot</span></div>
-      <div class="logo-item"><img src="logos/logo-6.svg" alt="Company 6" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="logo-fallback">Workday</span></div>
-      <div class="logo-item"><img src="logos/logo-7.svg" alt="Company 7" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="logo-fallback">SAP</span></div>
-      <div class="logo-item"><img src="logos/logo-8.svg" alt="Company 8" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="logo-fallback">Oracle</span></div>
     </div>
   </div>
 </section>
@@ -398,3 +381,9 @@
 
 </body>
 </html>
+"""
+
+with open("/Users/tomasi/Documents/TI website/index.html", "w") as f:
+    f.write(html_content)
+
+print("Done:", len(html_content), "chars")

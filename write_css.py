@@ -1,3 +1,4 @@
+css_content = """\
 /* BASE */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -181,22 +182,6 @@ a.contact__item:hover{color:var(--black)}
 .footer__links a:hover{color:var(--white)}
 .footer__copy{font-size:.75rem;color:var(--grey-800)}
 
-/* LOGOS STRIP */
-.logos-strip{background:var(--cream);padding:56px 0;border-top:1px solid var(--grey-100)}
-.logos-strip__label{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--grey-300);text-align:center;margin-bottom:36px}
-.logos-strip__track{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0}
-.logo-item{display:flex;align-items:center;justify-content:center;padding:16px 36px;border-right:1px solid var(--grey-200);opacity:.45;transition:opacity var(--trans);filter:grayscale(1)}
-.logo-item:last-child{border-right:none}
-.logo-item:hover{opacity:.75}
-.logo-item img{height:28px;width:auto;max-width:120px;object-fit:contain}
-.logo-fallback{font-family:var(--font-sans);font-size:.85rem;font-weight:700;letter-spacing:.06em;color:var(--grey-600);text-transform:uppercase;white-space:nowrap}
-@media(max-width:768px){
-  .logos-strip__track{gap:0}
-  .logo-item{padding:14px 24px;border-right:none;border-bottom:1px solid var(--grey-200)}
-  .logo-item:nth-child(odd){border-right:1px solid var(--grey-200)}
-  .logos-strip__track{display:grid;grid-template-columns:1fr 1fr}
-}
-
 /* ANIMATIONS */
 .fade-in{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
@@ -226,3 +211,9 @@ a.contact__item:hover{color:var(--black)}
   .cta-banner__actions{flex-direction:column}
   .stats-strip__item{padding:36px 20px}
 }
+"""
+
+with open("/Users/tomasi/Documents/TI website/styles.css", "w") as f:
+    f.write(css_content)
+
+print("Done:", len(css_content), "chars")
