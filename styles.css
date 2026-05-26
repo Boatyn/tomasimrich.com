@@ -135,7 +135,8 @@ a{color:inherit;text-decoration:none}
 .about__why{background:var(--white);border-radius:var(--radius-lg);padding:44px}
 .about__why-title{font-family:var(--font-serif);font-size:1.4rem;font-weight:400;color:var(--black);margin-bottom:28px;letter-spacing:-.01em}
 .why-list{list-style:none}
-.why-list__item{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid var(--grey-100);font-size:.9rem;color:var(--grey-600);line-height:1.5}
+.why-list__item{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid var(--grey-100);font-size:.9rem;color:var(--grey-600);line-height:1.6}
+.why-list__item strong{display:block;color:var(--black);font-weight:600;margin-bottom:3px}
 .why-list__item:first-child{border-top:1px solid var(--grey-100)}
 .why-list__icon{flex-shrink:0;margin-top:2px;color:var(--accent)}
 
