@@ -188,7 +188,7 @@ a.contact__item:hover{color:var(--black)}
 .logo-item{display:flex;align-items:center;justify-content:center;padding:20px 48px;border-right:1px solid var(--grey-200);opacity:.5;transition:opacity var(--trans);filter:grayscale(1)}
 .logo-item:last-child{border-right:none}
 .logo-item:hover{opacity:.8;filter:grayscale(0)}
-.logo-item img{height:32px;width:auto;max-width:140px;object-fit:contain}
+.logo-item img{height:32px;width:auto;max-width:140px;object-fit:contain;mix-blend-mode:multiply}
 @media(max-width:768px){
   .logos-strip__track{display:grid;grid-template-columns:repeat(3,1fr)}
   .logo-item{padding:18px 24px;border-right:none;border-bottom:1px solid var(--grey-200)}
