@@ -11,7 +11,7 @@
   <meta property="og:url" content="https://www.tomasimrich.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/@formspree/ajax@1/dist/formspree-ajax.js" defer></script>
   <script src="main.js" defer></script>
@@ -36,32 +36,61 @@
 </nav>
 
 <section class="hero" id="home">
-  <div class="hero__bg"></div>
-  <div class="hero__container">
-    <p class="hero__eyebrow">Tomas Imrich, Business Development</p>
-    <h1 class="hero__headline">I help B2B companies<br><span>open doors and close deals.</span></h1>
-    <p class="hero__sub">Senior business development and commercial support for companies looking to win enterprise customers, enter new markets and accelerate revenue growth.</p>
-    <p class="hero__detail">I bring 16+ years of international experience across SaaS, technology, financial services and professional services, from commercial strategy and pipeline development through to negotiation and closing.</p>
-    <div class="hero__actions">
-      <a href="#contact" class="btn btn--dark">Let's talk</a>
-      <a href="#services" class="btn btn--outline-light">See how I work</a>
+  <div class="hero__shell">
+    <div class="hero__copy">
+      <h1 class="hero__headline">I help B2B companies open doors and close deals.</h1>
+      <p class="hero__sub">Senior business development and commercial support for companies looking to win enterprise customers, enter new markets and accelerate revenue growth.</p>
+      <p class="hero__detail">I bring 16+ years of international experience across SaaS, technology, financial services and professional services, from commercial strategy and pipeline development through to negotiation and closing.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Let's talk <span class="btn__arrow" aria-hidden="true">&rarr;</span></a>
+        <a href="#services" class="btn btn--ghost">See how I work</a>
+      </div>
     </div>
-    <div class="hero__scroll">
-      <div class="hero__scroll-line"></div>
-      <span class="hero__scroll-text">Scroll to explore</span>
+    <div class="hero__media" aria-hidden="true">
+      <div class="hero__portrait">
+        <span>Photo coming soon</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="intro">
+<section class="stats">
+  <div class="container stats__grid">
+    <div class="stats__item fade-in">
+      <span class="stats__number" data-count="16" data-suffix="+">16+</span>
+      <span class="stats__label">Years in B2B sales and business development</span>
+    </div>
+    <div class="stats__item fade-in">
+      <span class="stats__number">C-suite</span>
+      <span class="stats__label">Engagement with senior decision-makers</span>
+    </div>
+    <div class="stats__item fade-in">
+      <span class="stats__number">Europe</span>
+      <span class="stats__label">And wider international markets</span>
+    </div>
+    <div class="stats__item fade-in">
+      <span class="stats__number">Hands-on</span>
+      <span class="stats__label">Strategy combined with execution</span>
+    </div>
+  </div>
+</section>
+
+<section class="intro" id="intro">
   <div class="container">
-    <p class="intro__eyebrow">The brief</p>
-    <h2 class="intro__headline">Senior commercial expertise, without the full-time hire</h2>
-    <div class="intro__prose fade-in">
-      <p>Growing a B2B business often requires experienced commercial leadership before it makes sense to build a larger permanent team.</p>
-      <p>I work with founders, leadership teams and established businesses that need senior-level support to develop new business, enter markets, build strategic relationships or turn commercial opportunities into revenue.</p>
-      <p>My approach is hands-on. I don't just advise on what should be done. I can help execute it.</p>
-      <p>Depending on the requirement, I work on a fractional, project or fixed-term basis.</p>
+    <span class="pill">Expertise</span>
+    <div class="split-head">
+      <h2 class="section-title">Senior commercial expertise, without the full-time hire</h2>
+      <div class="split-head__text">
+        <p>Growing a B2B business often requires experienced commercial leadership before it makes sense to build a larger permanent team.</p>
+        <p>I work with founders, leadership teams and established businesses that need senior-level support to develop new business, enter markets, build strategic relationships or turn commercial opportunities into revenue.</p>
+        <p>My approach is hands-on. I don't just advise on what should be done. I can help execute it. Depending on the requirement, I work on a fractional, project or fixed-term basis.</p>
+      </div>
+    </div>
+    <div class="intro__visual fade-in">
+      <div class="intro__photo">Photo coming soon</div>
+    </div>
+    <div class="intro__cta">
+      <a href="#contact" class="btn btn--primary">Let's talk <span class="btn__arrow" aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -80,255 +109,298 @@
   </div>
 </section>
 
-<section class="usps" id="services">
+<section class="offerings" id="services">
   <div class="container">
-    <p class="eyebrow">What I do</p>
-    <h2 class="section-title">Where I typically get involved</h2>
-    <p class="usps__hint">Click each area to see what the work actually covers.</p>
-    <div class="usps__explorer fade-in">
-      <div class="usps__tabs" role="tablist" aria-label="Services">
-        <button class="usps__tab is-active" role="tab" id="svc-tab-1" aria-selected="true" aria-controls="svc-1" tabindex="0">Fractional BD</button>
-        <button class="usps__tab" role="tab" id="svc-tab-2" aria-selected="false" aria-controls="svc-2" tabindex="-1">Enterprise sales</button>
-        <button class="usps__tab" role="tab" id="svc-tab-3" aria-selected="false" aria-controls="svc-3" tabindex="-1">Market entry</button>
-        <button class="usps__tab" role="tab" id="svc-tab-4" aria-selected="false" aria-controls="svc-4" tabindex="-1">Partnerships</button>
-        <button class="usps__tab" role="tab" id="svc-tab-5" aria-selected="false" aria-controls="svc-5" tabindex="-1">Advisory</button>
-      </div>
-      <div class="usps__panels">
-        <div class="usps__panel" role="tabpanel" id="svc-1" aria-labelledby="svc-tab-1">
-          <p class="usps__num">01</p>
-          <h3>Fractional Business Development</h3>
-          <p>Need experienced business development capability without making a full-time senior hire? I can step into your business as a senior commercial resource, working alongside founders and leadership to identify opportunities, build pipeline and progress strategic deals.</p>
-          <p>The objective is simple: create meaningful commercial opportunities and turn them into revenue.</p>
-          <ul class="tick-list tick-list--dark">
-            <li>Target account identification</li>
-            <li>Prospecting and senior-level outreach</li>
-            <li>Discovery and qualification</li>
-            <li>Pipeline development</li>
-            <li>Commercial proposals</li>
-            <li>Negotiation and deal progression</li>
-            <li>CRM and pipeline discipline</li>
-          </ul>
-        </div>
-        <div class="usps__panel" role="tabpanel" id="svc-2" aria-labelledby="svc-tab-2" hidden>
-          <p class="usps__num">02</p>
-          <h3>Enterprise Sales &amp; Revenue Growth</h3>
-          <p>Complex B2B sales require more than generating leads. I help companies develop and manage enterprise opportunities from initial engagement through discovery, solution development, negotiation and close.</p>
-          <p>I can also work with an existing commercial team to identify where opportunities are getting stuck and improve the way deals are qualified and progressed.</p>
-          <ul class="tick-list tick-list--dark">
-            <li>Enterprise and mid-market sales</li>
-            <li>Complex multi-stakeholder sales cycles</li>
-            <li>Consultative solution selling</li>
-            <li>C-suite engagement and new logo acquisition</li>
-            <li>Strategic account development</li>
-            <li>Cross-selling and account expansion</li>
-            <li>Commercial negotiation</li>
-            <li>Pipeline review and MEDDPICC-based qualification</li>
-          </ul>
-        </div>
-        <div class="usps__panel" role="tabpanel" id="svc-3" aria-labelledby="svc-tab-3" hidden>
-          <p class="usps__num">03</p>
-          <h3>Market Entry &amp; Expansion</h3>
-          <p>Entering a new market requires more than translating your website and building a prospect list. You need to understand where the opportunity is, who is likely to buy, how the proposition should be positioned and how you are going to reach the right decision-makers.</p>
-          <p>I help businesses turn market-entry plans into commercial activity. I can support the strategy, the execution, or both.</p>
-          <ul class="tick-list tick-list--dark">
-            <li>Market and commercial opportunity assessment</li>
-            <li>Ideal customer profile development</li>
-            <li>Competitor and market positioning</li>
-            <li>Target-account mapping</li>
-            <li>Go-to-market strategy</li>
-            <li>Local prospecting and outreach</li>
-            <li>Partnership development</li>
-            <li>First customer acquisition and an initial sales pipeline</li>
-          </ul>
-        </div>
-        <div class="usps__panel" role="tabpanel" id="svc-4" aria-labelledby="svc-tab-4" hidden>
-          <p class="usps__num">04</p>
-          <h3>Strategic Partnerships</h3>
-          <p>The right partnership can create opportunities that would take years to develop through direct sales alone. I help companies identify and develop relationships with organisations that can provide access to customers, markets, expertise or distribution.</p>
-          <p>The focus is always on partnerships that can produce genuine commercial value rather than partnerships that exist only on paper.</p>
-          <ul class="tick-list tick-list--dark">
-            <li>Partnership strategy</li>
-            <li>Partner identification and mapping</li>
-            <li>Referral relationships and strategic introductions</li>
-            <li>Channel development</li>
-            <li>Commercial negotiations</li>
-            <li>Joint propositions</li>
-            <li>Ongoing partner development</li>
-          </ul>
-        </div>
-        <div class="usps__panel" role="tabpanel" id="svc-5" aria-labelledby="svc-tab-5" hidden>
-          <p class="usps__num">05</p>
-          <h3>Commercial Strategy &amp; Advisory</h3>
-          <p>Sometimes the challenge isn't a lack of sales activity. It's knowing where to focus it. I work with founders and leadership teams on commercial questions, and bring an external perspective combined with hands-on commercial experience.</p>
-          <p>Where useful, I can stay involved beyond the strategy and help put the recommendations into practice.</p>
-          <ul class="tick-list tick-list--dark">
-            <li>Which markets should we prioritise?</li>
-            <li>Who should we actually be selling to?</li>
-            <li>Why isn't our pipeline converting?</li>
-            <li>How should we approach enterprise customers?</li>
-            <li>Where are deals getting stuck?</li>
-            <li>Should we sell directly or through partners?</li>
-            <li>How do we turn existing relationships into larger accounts?</li>
-          </ul>
-        </div>
-      </div>
+    <span class="pill">Services</span>
+    <div class="split-head">
+      <h2 class="section-title">Where I typically get involved</h2>
+      <p class="split-head__text">Click each area to see what the work actually covers. Fractional, project or fixed-term, depending on what the business needs.</p>
     </div>
-  </div>
-</section>
-
-<section class="experience" id="experience">
-  <div class="container">
-    <p class="eyebrow">Experience</p>
-    <h2 class="section-title">16+ years in B2B sales and business development</h2>
-    <div class="experience__lead fade-in">
-      <p>My background spans financial services, SaaS, technology, professional services and media, working with businesses ranging from growth companies to major international organisations.</p>
-      <p>I have built and developed relationships with C-suite executives and senior decision-makers across Europe and wider international markets, managing complex sales processes involving multiple stakeholders, products and jurisdictions.</p>
+    <div class="offer-list fade-in" role="tablist" aria-label="Services">
+      <button class="offer-row is-active" type="button" role="tab" id="svc-tab-1" aria-selected="true" aria-controls="svc-1" tabindex="0">
+        <span class="offer-row__title">Fractional Business Development</span>
+        <span class="offer-row__desc">Senior commercial resource without making a full-time hire.</span>
+        <span class="offer-row__go" aria-hidden="true">&rarr;</span>
+      </button>
+      <button class="offer-row" type="button" role="tab" id="svc-tab-2" aria-selected="false" aria-controls="svc-2" tabindex="-1">
+        <span class="offer-row__title">Enterprise Sales &amp; Revenue Growth</span>
+        <span class="offer-row__desc">Complex B2B opportunities from first engagement through close.</span>
+        <span class="offer-row__go" aria-hidden="true">&rarr;</span>
+      </button>
+      <button class="offer-row" type="button" role="tab" id="svc-tab-3" aria-selected="false" aria-controls="svc-3" tabindex="-1">
+        <span class="offer-row__title">Market Entry &amp; Expansion</span>
+        <span class="offer-row__desc">Turn market-entry plans into commercial activity.</span>
+        <span class="offer-row__go" aria-hidden="true">&rarr;</span>
+      </button>
+      <button class="offer-row" type="button" role="tab" id="svc-tab-4" aria-selected="false" aria-controls="svc-4" tabindex="-1">
+        <span class="offer-row__title">Strategic Partnerships</span>
+        <span class="offer-row__desc">Relationships that produce genuine commercial value.</span>
+        <span class="offer-row__go" aria-hidden="true">&rarr;</span>
+      </button>
+      <button class="offer-row" type="button" role="tab" id="svc-tab-5" aria-selected="false" aria-controls="svc-5" tabindex="-1">
+        <span class="offer-row__title">Commercial Strategy &amp; Advisory</span>
+        <span class="offer-row__desc">Knowing where to focus, then helping put it into practice.</span>
+        <span class="offer-row__go" aria-hidden="true">&rarr;</span>
+      </button>
     </div>
-    <div class="experience__grid">
-      <article class="experience__card fade-in">
-        <h3>Enterprise Sales</h3>
-        <p>Complex B2B sales from opportunity identification through negotiation and close.</p>
-      </article>
-      <article class="experience__card fade-in">
-        <h3>Financial &amp; Professional Services</h3>
-        <p>Fund services, corporate services, compliance, accounting and tax, treasury and other regulated business solutions.</p>
-      </article>
-      <article class="experience__card fade-in">
-        <h3>SaaS &amp; Technology</h3>
-        <p>Technology-enabled platforms, digital solutions and enterprise technology propositions.</p>
-      </article>
-      <article class="experience__card fade-in">
-        <h3>Market Development</h3>
-        <p>Developing new markets, customer segments and commercial opportunities across Europe.</p>
-      </article>
-      <article class="experience__card fade-in">
-        <h3>Strategic Accounts</h3>
-        <p>Growing existing relationships through cross-selling, account development and broader strategic engagement.</p>
-      </article>
-      <article class="experience__card fade-in">
-        <h3>AI &amp; Sales Automation</h3>
-        <p>Applying AI and automation to prospect research, sales workflows, proposals and commercial productivity.</p>
-      </article>
+    <div class="offer-detail">
+      <div class="offer-panel" role="tabpanel" id="svc-1" aria-labelledby="svc-tab-1">
+        <p>Need experienced business development capability without making a full-time senior hire? I can step into your business as a senior commercial resource, working alongside founders and leadership to identify opportunities, build pipeline and progress strategic deals.</p>
+        <p>The objective is simple: create meaningful commercial opportunities and turn them into revenue.</p>
+        <ul class="tick-list">
+          <li>Target account identification</li>
+          <li>Prospecting and senior-level outreach</li>
+          <li>Discovery and qualification</li>
+          <li>Pipeline development</li>
+          <li>Commercial proposals</li>
+          <li>Negotiation and deal progression</li>
+          <li>CRM and pipeline discipline</li>
+        </ul>
+      </div>
+      <div class="offer-panel" role="tabpanel" id="svc-2" aria-labelledby="svc-tab-2" hidden>
+        <p>Complex B2B sales require more than generating leads. I help companies develop and manage enterprise opportunities from initial engagement through discovery, solution development, negotiation and close.</p>
+        <p>I can also work with an existing commercial team to identify where opportunities are getting stuck and improve the way deals are qualified and progressed.</p>
+        <ul class="tick-list">
+          <li>Enterprise and mid-market sales</li>
+          <li>Complex multi-stakeholder sales cycles</li>
+          <li>Consultative solution selling</li>
+          <li>C-suite engagement and new logo acquisition</li>
+          <li>Strategic account development</li>
+          <li>Cross-selling and account expansion</li>
+          <li>Commercial negotiation</li>
+          <li>Pipeline review and MEDDPICC-based qualification</li>
+        </ul>
+      </div>
+      <div class="offer-panel" role="tabpanel" id="svc-3" aria-labelledby="svc-tab-3" hidden>
+        <p>Entering a new market requires more than translating your website and building a prospect list. You need to understand where the opportunity is, who is likely to buy, how the proposition should be positioned and how you are going to reach the right decision-makers.</p>
+        <p>I help businesses turn market-entry plans into commercial activity. I can support the strategy, the execution, or both.</p>
+        <ul class="tick-list">
+          <li>Market and commercial opportunity assessment</li>
+          <li>Ideal customer profile development</li>
+          <li>Competitor and market positioning</li>
+          <li>Target-account mapping</li>
+          <li>Go-to-market strategy</li>
+          <li>Local prospecting and outreach</li>
+          <li>Partnership development</li>
+          <li>First customer acquisition and an initial sales pipeline</li>
+        </ul>
+      </div>
+      <div class="offer-panel" role="tabpanel" id="svc-4" aria-labelledby="svc-tab-4" hidden>
+        <p>The right partnership can create opportunities that would take years to develop through direct sales alone. I help companies identify and develop relationships with organisations that can provide access to customers, markets, expertise or distribution.</p>
+        <p>The focus is always on partnerships that can produce genuine commercial value rather than partnerships that exist only on paper.</p>
+        <ul class="tick-list">
+          <li>Partnership strategy</li>
+          <li>Partner identification and mapping</li>
+          <li>Referral relationships and strategic introductions</li>
+          <li>Channel development</li>
+          <li>Commercial negotiations</li>
+          <li>Joint propositions</li>
+          <li>Ongoing partner development</li>
+        </ul>
+      </div>
+      <div class="offer-panel" role="tabpanel" id="svc-5" aria-labelledby="svc-tab-5" hidden>
+        <p>Sometimes the challenge isn't a lack of sales activity. It's knowing where to focus it. I work with founders and leadership teams on commercial questions, and bring an external perspective combined with hands-on commercial experience.</p>
+        <p>Where useful, I can stay involved beyond the strategy and help put the recommendations into practice.</p>
+        <ul class="tick-list">
+          <li>Which markets should we prioritise?</li>
+          <li>Who should we actually be selling to?</li>
+          <li>Why isn't our pipeline converting?</li>
+          <li>How should we approach enterprise customers?</li>
+          <li>Where are deals getting stuck?</li>
+          <li>Should we sell directly or through partners?</li>
+          <li>How do we turn existing relationships into larger accounts?</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="method" id="approach">
   <div class="container">
-    <p class="eyebrow">How I work</p>
-    <h2 class="section-title">Understand, prioritise, execute, build</h2>
-    <p class="method__hint">Click a step.</p>
-    <div class="steps steps--wide fade-in" id="startSteps">
-      <div class="steps__nav" role="tablist" aria-label="How I work">
-        <button type="button" class="steps__tab is-active" role="tab" aria-selected="true" aria-controls="step-1" id="step-tab-1">
-          <span class="steps__index">01</span>
-          Understand
-        </button>
-        <button type="button" class="steps__tab" role="tab" aria-selected="false" aria-controls="step-2" id="step-tab-2">
-          <span class="steps__index">02</span>
-          Prioritise
-        </button>
-        <button type="button" class="steps__tab" role="tab" aria-selected="false" aria-controls="step-3" id="step-tab-3">
-          <span class="steps__index">03</span>
-          Execute
-        </button>
-        <button type="button" class="steps__tab" role="tab" aria-selected="false" aria-controls="step-4" id="step-tab-4">
-          <span class="steps__index">04</span>
-          Build
-        </button>
+    <div class="center-head">
+      <span class="pill">How I work</span>
+      <h2 class="section-title">Understand, prioritise, execute, build</h2>
+    </div>
+    <div class="card-row fade-in" role="tablist" aria-label="How I work">
+      <button class="icon-card is-active" type="button" role="tab" id="step-tab-1" aria-selected="true" aria-controls="step-1" tabindex="0">
+        <span class="icon-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+        </span>
+        <span class="icon-card__title">Understand</span>
+        <span class="icon-card__desc">Start with the commercial objective.</span>
+      </button>
+      <button class="icon-card" type="button" role="tab" id="step-tab-2" aria-selected="false" aria-controls="step-2" tabindex="-1">
+        <span class="icon-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="icon-card__title">Prioritise</span>
+        <span class="icon-card__desc">Highest-value opportunities, a practical plan.</span>
+      </button>
+      <button class="icon-card" type="button" role="tab" id="step-tab-3" aria-selected="false" aria-controls="step-3" tabindex="-1">
+        <span class="icon-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </span>
+        <span class="icon-card__title">Execute</span>
+        <span class="icon-card__desc">Work directly on the commercial activity.</span>
+      </button>
+      <button class="icon-card" type="button" role="tab" id="step-tab-4" aria-selected="false" aria-controls="step-4" tabindex="-1">
+        <span class="icon-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </span>
+        <span class="icon-card__title">Build</span>
+        <span class="icon-card__desc">Leave processes your team can continue.</span>
+      </button>
+    </div>
+    <div class="method__detail">
+      <div class="method__panel" role="tabpanel" id="step-1" aria-labelledby="step-tab-1">
+        <h3>Understand</h3>
+        <p>We start with the commercial objective. What are you trying to achieve? Where is the opportunity? What's currently preventing you from getting there?</p>
+        <p>I look at your proposition, customers, pipeline, market and existing sales approach before recommending where to focus.</p>
       </div>
-      <div class="steps__panels">
-        <div class="steps__panel" role="tabpanel" id="step-1" aria-labelledby="step-tab-1">
-          <h4>Understand</h4>
-          <p>We start with the commercial objective. What are you trying to achieve? Where is the opportunity? What's currently preventing you from getting there?</p>
-          <p>I look at your proposition, customers, pipeline, market and existing sales approach before recommending where to focus.</p>
-        </div>
-        <div class="steps__panel" role="tabpanel" id="step-2" aria-labelledby="step-tab-2" hidden>
-          <h4>Prioritise</h4>
-          <p>We identify the highest-value commercial opportunities and define a practical plan.</p>
-          <p>That might mean targeting a particular customer segment, entering a new market, developing a strategic partnership or progressing a small number of high-value enterprise opportunities.</p>
-        </div>
-        <div class="steps__panel" role="tabpanel" id="step-3" aria-labelledby="step-tab-3" hidden>
-          <h4>Execute</h4>
-          <p>This is where my approach differs from traditional consulting.</p>
-          <p>I can work directly on the commercial activity: approaching prospects, opening conversations, developing opportunities, working with stakeholders and helping progress deals.</p>
-        </div>
-        <div class="steps__panel" role="tabpanel" id="step-4" aria-labelledby="step-tab-4" hidden>
-          <h4>Build</h4>
-          <p>The goal isn't to create permanent dependence on an external consultant.</p>
-          <p>Where appropriate, I help establish the processes, commercial discipline and relationships that your internal team can continue to develop.</p>
-        </div>
+      <div class="method__panel" role="tabpanel" id="step-2" aria-labelledby="step-tab-2" hidden>
+        <h3>Prioritise</h3>
+        <p>We identify the highest-value commercial opportunities and define a practical plan.</p>
+        <p>That might mean targeting a particular customer segment, entering a new market, developing a strategic partnership or progressing a small number of high-value enterprise opportunities.</p>
       </div>
+      <div class="method__panel" role="tabpanel" id="step-3" aria-labelledby="step-tab-3" hidden>
+        <h3>Execute</h3>
+        <p>This is where my approach differs from traditional consulting.</p>
+        <p>I can work directly on the commercial activity: approaching prospects, opening conversations, developing opportunities, working with stakeholders and helping progress deals.</p>
+      </div>
+      <div class="method__panel" role="tabpanel" id="step-4" aria-labelledby="step-tab-4" hidden>
+        <h3>Build</h3>
+        <p>The goal isn't to create permanent dependence on an external consultant.</p>
+        <p>Where appropriate, I help establish the processes, commercial discipline and relationships that your internal team can continue to develop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stories" id="experience">
+  <div class="container">
+    <div class="split-head">
+      <h2 class="section-title">16+ years in B2B sales and business development</h2>
+      <a href="#contact" class="btn btn--primary">Let's talk <span class="btn__arrow" aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div class="stories__lead fade-in">
+      <p>My background spans financial services, SaaS, technology, professional services and media, working with businesses ranging from growth companies to major international organisations.</p>
+      <p>I have built and developed relationships with C-suite executives and senior decision-makers across Europe and wider international markets, managing complex sales processes involving multiple stakeholders, products and jurisdictions.</p>
+    </div>
+    <div class="stories__grid">
+      <article class="story-card fade-in">
+        <div class="story-card__media story-card__media--1" aria-hidden="true"></div>
+        <h3>Enterprise Sales</h3>
+        <p>Complex B2B sales from opportunity identification through negotiation and close.</p>
+        <div class="tags"><span>Enterprise</span><span>Negotiation</span><span>Close</span></div>
+      </article>
+      <article class="story-card fade-in">
+        <div class="story-card__media story-card__media--2" aria-hidden="true"></div>
+        <h3>Financial &amp; Professional Services</h3>
+        <p>Fund services, corporate services, compliance, accounting and tax, treasury and other regulated business solutions.</p>
+        <div class="tags"><span>Regulated</span><span>FS</span><span>Professional services</span></div>
+      </article>
+      <article class="story-card fade-in">
+        <div class="story-card__media story-card__media--3" aria-hidden="true"></div>
+        <h3>SaaS &amp; Technology</h3>
+        <p>Technology-enabled platforms, digital solutions and enterprise technology propositions.</p>
+        <div class="tags"><span>SaaS</span><span>Technology</span><span>Platforms</span></div>
+      </article>
+      <article class="story-card fade-in">
+        <div class="story-card__media story-card__media--4" aria-hidden="true"></div>
+        <h3>Market Development</h3>
+        <p>Developing new markets, customer segments and commercial opportunities across Europe.</p>
+        <div class="tags"><span>Europe</span><span>Market entry</span><span>Segments</span></div>
+      </article>
+      <article class="story-card fade-in">
+        <div class="story-card__media story-card__media--5" aria-hidden="true"></div>
+        <h3>Strategic Accounts</h3>
+        <p>Growing existing relationships through cross-selling, account development and broader strategic engagement.</p>
+        <div class="tags"><span>Accounts</span><span>Cross-sell</span><span>Expansion</span></div>
+      </article>
+      <article class="story-card fade-in">
+        <div class="story-card__media story-card__media--6" aria-hidden="true"></div>
+        <h3>AI &amp; Sales Automation</h3>
+        <p>Applying AI and automation to prospect research, sales workflows, proposals and commercial productivity.</p>
+        <div class="tags"><span>AI</span><span>Automation</span><span>Productivity</span></div>
+      </article>
     </div>
   </div>
 </section>
 
 <section class="clients" id="clients">
-  <div class="clients__split">
-    <div class="clients__image">
-      <div class="clients__image-inner">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-        <span>Image coming soon</span>
-      </div>
+  <div class="container">
+    <div class="split-head">
+      <h2 class="section-title">Who I typically work with</h2>
+      <p class="split-head__text">Relevant to B2B companies that need senior commercial capability before, or instead of, a permanent hire. I am particularly comfortable working with SaaS, technology, financial services and professional services businesses.</p>
     </div>
-    <div class="clients__content fade-in">
-      <p class="eyebrow">Who I typically work with</p>
-      <h2 class="section-title">Relevant when you need senior commercial capability</h2>
-      <p class="clients__lead">My work is particularly relevant to B2B companies that:</p>
-      <ul class="tick-list">
-        <li>Have a strong product or service but need more senior commercial capability</li>
-        <li>Want to win larger enterprise customers</li>
-        <li>Are entering a new European market</li>
-        <li>Need someone to build an initial market or customer pipeline</li>
-        <li>Have opportunities but struggle to progress them</li>
-        <li>Want to develop strategic partnerships or referral channels</li>
-        <li>Need senior commercial support before making a permanent hire</li>
-        <li>Want an experienced operator who can combine strategy with execution</li>
-      </ul>
-      <p class="clients__note">I am particularly comfortable working with SaaS, technology, financial services and professional services businesses.</p>
+    <div class="clients__layout fade-in">
+      <div class="clients__photo">Photo coming soon</div>
+      <div class="clients__content">
+        <p class="clients__lead">My work is particularly relevant to B2B companies that:</p>
+        <ul class="tick-list">
+          <li>Have a strong product or service but need more senior commercial capability</li>
+          <li>Want to win larger enterprise customers</li>
+          <li>Are entering a new European market</li>
+          <li>Need someone to build an initial market or customer pipeline</li>
+          <li>Have opportunities but struggle to progress them</li>
+          <li>Want to develop strategic partnerships or referral channels</li>
+          <li>Need senior commercial support before making a permanent hire</li>
+          <li>Want an experienced operator who can combine strategy with execution</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="usps" id="why">
+<section class="offerings offerings--why" id="why">
   <div class="container">
-    <p class="eyebrow">Why work with me</p>
-    <h2 class="section-title">Senior experience, used where it counts</h2>
-    <p class="usps__hint">Click each point.</p>
-    <div class="usps__explorer fade-in">
-      <div class="usps__tabs" role="tablist" aria-label="Why work with me">
-        <button class="usps__tab is-active" role="tab" id="usp-tab-senior" aria-selected="true" aria-controls="usp-senior" tabindex="0">Senior experience</button>
-        <button class="usps__tab" role="tab" id="usp-tab-hands" aria-selected="false" aria-controls="usp-hands" tabindex="-1">Hands-on</button>
-        <button class="usps__tab" role="tab" id="usp-tab-enterprise" aria-selected="false" aria-controls="usp-enterprise" tabindex="-1">Enterprise</button>
-        <button class="usps__tab" role="tab" id="usp-tab-intl" aria-selected="false" aria-controls="usp-intl" tabindex="-1">International</button>
-        <button class="usps__tab" role="tab" id="usp-tab-flex" aria-selected="false" aria-controls="usp-flex" tabindex="-1">Flexible</button>
+    <span class="pill">Why me</span>
+    <div class="split-head">
+      <h2 class="section-title">Why work with me</h2>
+      <p class="split-head__text">Senior experience, used where it counts. Click each point.</p>
+    </div>
+    <div class="offer-list fade-in" role="tablist" aria-label="Why work with me">
+      <button class="offer-row is-active" type="button" role="tab" id="usp-tab-senior" aria-selected="true" aria-controls="usp-senior" tabindex="0">
+        <span class="offer-row__title">Senior experience</span>
+        <span class="offer-row__desc">16+ years across complex, competitive markets.</span>
+        <span class="offer-row__go" aria-hidden="true">&rarr;</span>
+      </button>
+      <button class="offer-row" type="button" role="tab" id="usp-tab-hands" aria-selected="false" aria-controls="usp-hands" tabindex="-1">
+        <span class="offer-row__title">Hands-on execution</span>
+        <span class="offer-row__desc">I don't stop at recommendations.</span>
+        <span class="offer-row__go" aria-hidden="true">&rarr;</span>
+      </button>
+      <button class="offer-row" type="button" role="tab" id="usp-tab-enterprise" aria-selected="false" aria-controls="usp-enterprise" tabindex="-1">
+        <span class="offer-row__title">Enterprise mindset</span>
+        <span class="offer-row__desc">Long cycles, many stakeholders, senior buyers.</span>
+        <span class="offer-row__go" aria-hidden="true">&rarr;</span>
+      </button>
+      <button class="offer-row" type="button" role="tab" id="usp-tab-intl" aria-selected="false" aria-controls="usp-intl" tabindex="-1">
+        <span class="offer-row__title">International perspective</span>
+        <span class="offer-row__desc">Europe and wider international markets.</span>
+        <span class="offer-row__go" aria-hidden="true">&rarr;</span>
+      </button>
+      <button class="offer-row" type="button" role="tab" id="usp-tab-flex" aria-selected="false" aria-controls="usp-flex" tabindex="-1">
+        <span class="offer-row__title">Flexible engagement</span>
+        <span class="offer-row__desc">Fractional, project-based or fixed-term.</span>
+        <span class="offer-row__go" aria-hidden="true">&rarr;</span>
+      </button>
+    </div>
+    <div class="offer-detail">
+      <div class="offer-panel" role="tabpanel" id="usp-senior" aria-labelledby="usp-tab-senior">
+        <p>16+ years of international B2B sales and business development experience across complex and highly competitive markets.</p>
       </div>
-      <div class="usps__panels">
-        <div class="usps__panel" role="tabpanel" id="usp-senior" aria-labelledby="usp-tab-senior">
-          <p class="usps__num">01</p>
-          <h3>Senior experience</h3>
-          <p>16+ years of international B2B sales and business development experience across complex and highly competitive markets.</p>
-        </div>
-        <div class="usps__panel" role="tabpanel" id="usp-hands" aria-labelledby="usp-tab-hands" hidden>
-          <p class="usps__num">02</p>
-          <h3>Hands-on execution</h3>
-          <p>I don't stop at recommendations. Where required, I work directly on pipeline, customers, partnerships and opportunities.</p>
-        </div>
-        <div class="usps__panel" role="tabpanel" id="usp-enterprise" aria-labelledby="usp-tab-enterprise" hidden>
-          <p class="usps__num">03</p>
-          <h3>Enterprise mindset</h3>
-          <p>I am comfortable navigating long sales cycles, multiple stakeholders, procurement processes and senior decision-makers.</p>
-        </div>
-        <div class="usps__panel" role="tabpanel" id="usp-intl" aria-labelledby="usp-tab-intl" hidden>
-          <p class="usps__num">04</p>
-          <h3>International perspective</h3>
-          <p>Experience developing business and managing commercial relationships across Europe and wider international markets.</p>
-        </div>
-        <div class="usps__panel" role="tabpanel" id="usp-flex" aria-labelledby="usp-tab-flex" hidden>
-          <p class="usps__num">05</p>
-          <h3>Flexible engagement</h3>
-          <p>Fractional, project-based or fixed-term support depending on what the business actually needs.</p>
-        </div>
+      <div class="offer-panel" role="tabpanel" id="usp-hands" aria-labelledby="usp-tab-hands" hidden>
+        <p>I don't stop at recommendations. Where required, I work directly on pipeline, customers, partnerships and opportunities.</p>
+      </div>
+      <div class="offer-panel" role="tabpanel" id="usp-enterprise" aria-labelledby="usp-tab-enterprise" hidden>
+        <p>I am comfortable navigating long sales cycles, multiple stakeholders, procurement processes and senior decision-makers.</p>
+      </div>
+      <div class="offer-panel" role="tabpanel" id="usp-intl" aria-labelledby="usp-tab-intl" hidden>
+        <p>Experience developing business and managing commercial relationships across Europe and wider international markets.</p>
+      </div>
+      <div class="offer-panel" role="tabpanel" id="usp-flex" aria-labelledby="usp-tab-flex" hidden>
+        <p>Fractional, project-based or fixed-term support depending on what the business actually needs.</p>
       </div>
     </div>
   </div>
@@ -336,37 +408,34 @@
 
 <section class="ai" id="ai">
   <div class="container">
-    <div class="ai__inner fade-in">
-      <div>
-        <p class="eyebrow">A more intelligent approach</p>
-        <h2 class="section-title">Better business development, with less wasted motion</h2>
+    <div class="split-head">
+      <h2 class="section-title">A more intelligent approach to business development</h2>
+      <div class="split-head__text">
         <p>Technology is changing how effective sales organisations operate. I have a particular interest in applying AI and automation to commercial workflows, not to replace the human side of selling, but to remove unnecessary manual work and allow salespeople to spend more time with customers.</p>
         <p>The objective isn't to add more technology. It's to make the commercial process faster, more informed and more effective.</p>
       </div>
-      <ul class="tick-list">
-        <li>Account and prospect research</li>
-        <li>Market intelligence</li>
-        <li>Personalised outreach preparation</li>
-        <li>Proposal development</li>
-        <li>Competitive research</li>
-        <li>CRM workflows</li>
-        <li>Sales administration</li>
-        <li>Pipeline analysis</li>
-      </ul>
     </div>
+    <ul class="ai__grid fade-in">
+      <li>Account and prospect research</li>
+      <li>Market intelligence</li>
+      <li>Personalised outreach preparation</li>
+      <li>Proposal development</li>
+      <li>Competitive research</li>
+      <li>CRM workflows</li>
+      <li>Sales administration</li>
+      <li>Pipeline analysis</li>
+    </ul>
   </div>
 </section>
 
 <section class="cta-banner">
   <div class="container">
-    <div class="cta-banner__inner">
-      <div>
-        <h2 class="cta-banner__headline">Let's talk.</h2>
-        <p class="cta-banner__body">If you're looking to win enterprise customers, enter a new market, develop strategic partnerships or simply bring more structure and senior experience into your commercial efforts, let's have a conversation. No lengthy sales process. We can start with a short discussion about what you're trying to achieve and whether I can help.</p>
-      </div>
+    <div class="cta-banner__box">
+      <h2 class="cta-banner__headline">Let's talk.</h2>
+      <p class="cta-banner__body">If you're looking to win enterprise customers, enter a new market, develop strategic partnerships or simply bring more structure and senior experience into your commercial efforts, let's have a conversation. No lengthy sales process. We can start with a short discussion about what you're trying to achieve and whether I can help.</p>
       <div class="cta-banner__actions">
-        <a href="#contact" class="btn btn--dark">Get in touch</a>
-        <a href="https://www.linkedin.com/in/tomasimrich" class="btn btn--outline-light" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#contact" class="btn btn--primary">Get in touch <span class="btn__arrow" aria-hidden="true">&rarr;</span></a>
+        <a href="https://www.linkedin.com/in/tomasimrich" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
   </div>
@@ -376,27 +445,17 @@
   <div class="container">
     <div class="contact__inner">
       <div class="contact__text fade-in">
-        <p class="eyebrow">Get in touch</p>
+        <span class="pill">Get in touch</span>
         <h2 class="section-title">Let's talk about what you're trying to achieve</h2>
         <p>No lengthy sales process. A short discussion about your situation and whether I can help.</p>
         <div class="contact__details">
-          <a href="mailto:tom.imrich@proton.me" class="contact__item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            tom.imrich@proton.me
-          </a>
-          <div class="contact__item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            London, UK &amp; Central Europe
-          </div>
-          <a href="https://www.linkedin.com/in/tomasimrich" class="contact__item" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            LinkedIn
-          </a>
+          <a href="mailto:tom.imrich@proton.me" class="contact__item">tom.imrich@proton.me</a>
+          <div class="contact__item">London, UK &amp; Central Europe</div>
+          <a href="https://www.linkedin.com/in/tomasimrich" class="contact__item" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
       <div class="contact__form fade-in">
-        <div class="form-success" data-fs-success>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        <div class="form-success" data-fs-success hidden>
           Message sent. I'll be in touch shortly.
         </div>
         <div class="form-error-banner" data-fs-error></div>
@@ -420,7 +479,7 @@
             <textarea class="form-input form-textarea" id="message" name="message" placeholder="Tell me about the commercial challenge you want to solve..." required data-fs-field></textarea>
             <span class="form-field-error" data-fs-field-error="message"></span>
           </div>
-          <button type="submit" class="btn btn--dark btn--full" data-fs-submit-btn>Send message</button>
+          <button type="submit" class="btn btn--primary btn--full" data-fs-submit-btn>Send message <span class="btn__arrow" aria-hidden="true">&rarr;</span></button>
           <p class="form-note">I typically respond within one business day.</p>
         </form>
       </div>
